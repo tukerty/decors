@@ -1,9 +1,12 @@
 const express = require('express')
-const app = express()
-const port = 31415
+const corsProxy = require('@isomorphic-git/cors-proxy/middleware.js')
 
-app.use('/', express.static('static'))
+const app = express()
+const port = 31413
+const options = {}
+
+app.use(corsProxy(options))
 
 app.listen(port, () => {
-  console.log(`Personal landing listening on port ${port}`)
+  console.log(`Decors listening on port ${port}`)
 })
