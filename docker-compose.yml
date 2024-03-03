@@ -1,0 +1,5 @@
+services:
+  decors:
+    build: .
+    ports:
+      - "31415:31415"
